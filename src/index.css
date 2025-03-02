@@ -1,0 +1,256 @@
+/* Google Fonts */
+@import url("https://fonts.googleapis.com/css2?family=Roboto&display=swap");
+
+/* General Styles */
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  font-family: "Roboto", sans-serif;
+  letter-spacing: 0.04em;
+}
+
+/* Background */
+.background {
+  background: linear-gradient(to bottom, #04263b, #0d4c9e, #ebeefb);
+  background-attachment: fixed;
+  background-size: cover;
+  background-position: center;
+  width: 100%;
+  height: 100vh;
+  padding: 15px;
+}
+
+/* Box */
+.background .box {
+  width: 767px;
+  height: 90%;
+  border-radius: 4px;
+  border: 2px solid #fff;
+  margin: 0 auto;
+  overflow-y: auto;
+  box-shadow: 0 0 20px rgba(0, 0, 0, 0.2);
+  padding: 15px;
+  background: #fff;
+}
+
+/* Responsive Box */
+@media (max-width: 768px) {
+  .background .box {
+    width: 100%;
+  }
+}
+
+/* Scrollbar Customization */
+.background .box::-webkit-scrollbar {
+  width: 6px;
+}
+
+.background .box::-webkit-scrollbar-thumb {
+  background-color: #2FA5ED;
+  border-radius: 4px;
+}
+
+.background .box::-webkit-scrollbar-track {
+  background-color: #e1e1e1;
+}
+
+/* Search Form */
+.box form {
+  display: flex;
+  align-items: center;
+  background-color: #fff;
+  border-radius: 4px;
+  height: 32px;
+  margin-top: 15px;
+}
+
+.box form .city-input {
+  flex-grow: 1;
+  border: none;
+  outline: none;
+  padding: 0 15px;
+}
+
+.box form button {
+  background: #fff;
+  color: #2fa5ed;
+  border: none;
+  padding: 0 15px;
+  cursor: pointer;
+  border-radius: 0 4px 4px 0;
+}
+
+/* Weather Details */
+.current-weather-details-box {
+  background: #fff;
+  border-radius: 4px;
+  padding: 15px;
+  margin-top: 15px;
+}
+
+.details-box-header {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+.details-box-header h4 {
+  color: #a09aa0;
+}
+
+/* Switch */
+.switch {
+  width: 80px;
+  height: 32px;
+  background: #2fa5ed;
+  display: flex;
+  align-items: center;
+  padding: 4px;
+  border-radius: 4px;
+  cursor: pointer;
+  position: relative;
+}
+
+.switch .switch-toggle {
+  width: 50%;
+  height: 100%;
+  background: #fff;
+  border-radius: 50%;
+  transition: all 0.3s;
+}
+
+.switch-toggle.c {
+  transform: translateX(0);
+}
+
+.switch-toggle.f {
+  transform: translateX(100%);
+}
+
+/* Error Message */
+.error-msg {
+  background: #f8d7da;
+  color: #721c24;
+  padding: 0.75rem 1.25rem;
+  margin-top: 1rem;
+  border: 1px solid #f5c6cb;
+  border-radius: 0.25rem;
+}
+
+/* Weather Details Layout */
+.weather-details-container {
+  display: flex;
+  padding: 15px;
+  margin-top: 15px;
+}
+
+.details, .metrices {
+  flex: 1;
+}
+
+.details {
+  border-right: 1px solid #a09aa0;
+}
+
+.metrices {
+  padding-left: 15px;
+}
+
+@media (max-width: 768px) {
+  .weather-details-container {
+    flex-direction: column;
+  }
+  .details {
+    border-right: none;
+    border-bottom: 1px solid #a09aa0;
+    padding-bottom: 15px;
+  }
+  .metrices {
+    padding-left: 0;
+    padding-top: 15px;
+  }
+}
+
+/* City Name */
+.city-name {
+  color: #2FA5ED;
+}
+
+.icon-and-temp {
+  display: flex;
+  align-items: center;
+}
+
+.icon-and-temp h1 {
+  font-size: 56px;
+  color: #2FA5ED;
+}
+
+.description {
+  color: #a09aa0;
+}
+
+/* Metrics Key-Value Pairs */
+.metrices h4 {
+  color: #2FA5ED;
+  margin-bottom: 25px;
+}
+
+.key-value-box {
+  display: flex;
+  margin-top: 15px;
+}
+
+.key, .value {
+  flex: 1;
+}
+
+.key span {
+  color: #a09aa0;
+}
+
+.value span {
+  color: #2FA5ED;
+}
+
+/* Extended Forecast */
+.extended-forecast-heading {
+  color: #a09aa0;
+  margin-top: 25px;
+}
+
+.extended-forecasts-container {
+  display: flex;
+  margin-top: 15px;
+}
+
+.forecast-box {
+  width: calc(20% - 10px);
+  height: 120px;
+  background: #2fa5ed;
+  color: #fff;
+  margin-right: 10px;
+  padding: 10px;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  border-radius: 4px;
+}
+
+@media (max-width: 768px) {
+  .extended-forecasts-container {
+    flex-direction: column;
+  }
+  .forecast-box {
+    width: 100%;
+    margin-right: 0;
+    margin-bottom: 10px;
+  }
+}
+
+.min-max-temp {
+  margin-top: 5px;
+  font-weight: 500;
+}
